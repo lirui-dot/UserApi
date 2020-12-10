@@ -24,16 +24,13 @@ namespace UserApi.Controllers
         public async Task<ActionResult> Edit(User user, int id)
         {
             
-            string phones= user.Image.Replace("data:image/png;base64,","");
+            string phones = user.Image.Replace("data:image/png;base64,", "");
             byte[] bytes = Convert.FromBase64String(phones);
             var path = Directory.GetCurrentDirectory();
             string fileUrl = Guid.NewGuid().ToString() + ".png";
             string url = path + @"\wwwroot\Image\" + fileUrl;
 
             System.IO.File.WriteAllBytes(url, bytes);
-
-
-
             string urlPath = url.Replace(path, "");  //转换成相对路径
 
             user.Image = urlPath;
@@ -44,7 +41,7 @@ namespace UserApi.Controllers
                 await _context.SaveChangesAsync();
                 return Json(user);
             }
-                return Json(user);
+            return Json(user);
         }
     }
 }

@@ -55,6 +55,7 @@ namespace UserApi
             app.UseRouting();
 
             app.UseCors();
+
             
             app.UseAuthorization();
 
