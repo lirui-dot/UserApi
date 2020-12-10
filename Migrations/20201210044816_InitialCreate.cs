@@ -7,6 +7,24 @@ namespace UserApi.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "provinces",
+                columns: table => new
+                {
+                    id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    name = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    parentid = table.Column<int>(type: "int", nullable: false),
+                    parentname = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    areacode = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    zipcode = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    depth = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_provinces", x => x.id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Users",
                 columns: table => new
                 {
@@ -29,6 +47,9 @@ namespace UserApi.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "provinces");
+
             migrationBuilder.DropTable(
                 name: "Users");
         }

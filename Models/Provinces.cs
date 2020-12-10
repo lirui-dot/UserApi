@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.IO;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
@@ -22,10 +23,11 @@ namespace UserApi.Models
         public string depth { get; set; }
 
     }
+    [NotMapped]
     public class ProvincesDetails{
         public int status{get;set;}
         public string msg{get;set;}
-        public Provinces[] result{get;set;}
+        public List<Provinces> result{get;set;}
     }
 
 }

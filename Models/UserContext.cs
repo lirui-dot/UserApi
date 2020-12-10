@@ -8,5 +8,6 @@ namespace UserApi.Models{
 
         }
         public DbSet<User> Users{get;set;}
+        public DbSet<Provinces> provinces{get;set;}
     }
 }
