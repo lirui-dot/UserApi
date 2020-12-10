@@ -42,7 +42,7 @@ namespace UserApi.Controllers
                 response.EnsureSuccessStatusCode();
                 Console.WriteLine(await response.Content.ReadAsStringAsync());
                 string i = await response.Content.ReadAsStringAsync();
-            
+                string pp="测试上传的项目是否成功";
                 // string o=i.Replace("\"","\'");
                 // string p=o.Replace("'status':0,'msg':'ok','result':[{","");
                 // string a=p.Replace("]}","");
