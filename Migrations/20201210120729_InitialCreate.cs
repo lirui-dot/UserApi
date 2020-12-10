@@ -7,24 +7,6 @@ namespace UserApi.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "Cities",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    parentid = table.Column<int>(type: "int", nullable: false),
-                    parentname = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    areacode = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    zipcode = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    depth = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Cities", x => x.id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Provinces",
                 columns: table => new
                 {
@@ -40,24 +22,6 @@ namespace UserApi.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Provinces", x => x.id);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Towns",
-                columns: table => new
-                {
-                    id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    name = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    parentid = table.Column<int>(type: "int", nullable: false),
-                    parentname = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    areacode = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    zipcode = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    depth = table.Column<string>(type: "nvarchar(max)", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Towns", x => x.id);
                 });
 
             migrationBuilder.CreateTable(
@@ -84,13 +48,7 @@ namespace UserApi.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Cities");
-
-            migrationBuilder.DropTable(
                 name: "Provinces");
-
-            migrationBuilder.DropTable(
-                name: "Towns");
 
             migrationBuilder.DropTable(
                 name: "Users");

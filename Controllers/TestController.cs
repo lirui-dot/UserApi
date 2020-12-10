@@ -31,7 +31,7 @@ namespace UserApi.Controllers
             // string url = "https://api.jisuapi.com/area/city?parentid=1&appkey=1b5f267715e671b2";
 
             //根据城市id获取区县
-            string url = "https://api.jisuapi.com/area/town?parentid=1&appkey=1b5f267715e671b2";
+            string url = "https://api.jisuapi.com/area/city?parentid=32&appkey=1b5f267715e671b2";
             var handler = new HttpClientHandler()
             {
                 AutomaticDecompression = DecompressionMethods.GZip
@@ -50,24 +50,24 @@ namespace UserApi.Controllers
                 // ProvinceDetails pr = JsonConvert.DeserializeObject<ProvinceDetails>(json);//反序列化
 
                 // CityDetails city = JsonConvert.DeserializeObject<CityDetails>(json);//反序列化
-                TownDetails town = JsonConvert.DeserializeObject<TownDetails>(json);//反序列化
+                ProvinceDetails province = JsonConvert.DeserializeObject<ProvinceDetails>(json);//反序列化
                 // Console.WriteLine(string.Format("反序列化： id={0},name={1},parentid={2},parentname={3},areacode={4},zipcode={5},depth={6}"
                 // , descJsonStu.id, descJsonStu.name, descJsonStu.parentid, descJsonStu.parentname,descJsonStu.areacode,descJsonStu.zipcode,descJsonStu.depth));
 
-                Town prs = new Town();
-                for (int i = 0; i < town.result.Count; i++)
+                Province prs = new Province();
+                for (int i = 0; i < province.result.Count; i++)
                 {
-                    prs.id = town.result[i].id;
-                    prs.name = town.result[i].name;
-                    prs.parentid = town.result[i].parentid;
-                    prs.parentname = town.result[i].parentname;
-                    prs.areacode = town.result[i].areacode;
-                    prs.zipcode = town.result[i].zipcode;
-                    prs.depth = town.result[i].depth;
+                    prs.id = province.result[i].id;
+                    prs.name = province.result[i].name;
+                    prs.parentid = province.result[i].parentid;
+                    prs.parentname = province.result[i].parentname;
+                    prs.areacode = province.result[i].areacode;
+                    prs.zipcode = province.result[i].zipcode;
+                    prs.depth = province.result[i].depth;
 
                     if (prs != null)
                     {
-                        _context.Towns.Add(prs);
+                        _context.Provinces.Add(prs);
                         await _context.SaveChangesAsync();
                     }
                 }
