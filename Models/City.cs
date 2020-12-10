@@ -6,8 +6,9 @@ using Newtonsoft.Json;
 
 namespace UserApi.Models
 {
-    public class Provinces
+    public class City
     {
+        
         public int id { get; set; }
 
         public string name { get; set; }
@@ -24,10 +25,10 @@ namespace UserApi.Models
 
     }
     [NotMapped]
-    public class ProvincesDetails{
+    public class CityDetails{
         public int status{get;set;}
         public string msg{get;set;}
-        public List<Provinces> result{get;set;}
+        public List<City> result{get;set;}
     }
 
 }

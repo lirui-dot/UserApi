@@ -9,7 +9,7 @@ using UserApi.Models;
 namespace UserApi.Migrations
 {
     [DbContext(typeof(UserContext))]
-    [Migration("20201210044816_InitialCreate")]
+    [Migration("20201210112936_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,7 +20,7 @@ namespace UserApi.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
-            modelBuilder.Entity("UserApi.Models.Provinces", b =>
+            modelBuilder.Entity("UserApi.Models.City", b =>
                 {
                     b.Property<int>("id")
                         .ValueGeneratedOnAdd()
@@ -47,7 +47,67 @@ namespace UserApi.Migrations
 
                     b.HasKey("id");
 
-                    b.ToTable("provinces");
+                    b.ToTable("Cities");
+                });
+
+            modelBuilder.Entity("UserApi.Models.Province", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("areacode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("depth")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("parentid")
+                        .HasColumnType("int");
+
+                    b.Property<string>("parentname")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("zipcode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Provinces");
+                });
+
+            modelBuilder.Entity("UserApi.Models.Town", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("areacode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("depth")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("parentid")
+                        .HasColumnType("int");
+
+                    b.Property<string>("parentname")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("zipcode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("id");
+
+                    b.ToTable("Towns");
                 });
 
             modelBuilder.Entity("UserApi.Models.User", b =>
