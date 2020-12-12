@@ -7387,11 +7387,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\new vs code\\UserApi\\UserApi.csproj",
+      "projectUniqueName": "E:\\new vs code\\UserApi\\UserApi.csproj",
       "projectName": "UserApi",
-      "projectPath": "C:\\new vs code\\UserApi\\UserApi.csproj",
+      "projectPath": "E:\\new vs code\\UserApi\\UserApi.csproj",
       "packagesPath": "C:\\Users\\lirui\\.nuget\\packages\\",
-      "outputPath": "C:\\new vs code\\UserApi\\obj\\",
+      "outputPath": "E:\\new vs code\\UserApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\lirui\\AppData\\Roaming\\NuGet\\NuGet.Config",

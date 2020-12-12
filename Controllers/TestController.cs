@@ -31,7 +31,7 @@ namespace UserApi.Controllers
             // string url = "https://api.jisuapi.com/area/city?parentid=1&appkey=1b5f267715e671b2";
 
             //根据城市id获取区县
-            string url = "https://api.jisuapi.com/area/city?parentid=32&appkey=1b5f267715e671b2";
+            string url = "://api.jisuapi.com/area/city?parentid=32&appkey=1b5f267715e671b2";
             var handler = new HttpClientHandler()
             {
                 AutomaticDecompression = DecompressionMethods.GZip

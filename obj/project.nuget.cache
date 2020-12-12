@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "G/cppyi0oWifbf7u8wdo53Rnp4lD5bpwfnURR8XlhXPw6BMKiJA3TL2O4y3GfpGTrqDPJ+7cAHw9udU+Dd1MUQ==",
+  "dgSpecHash": "9t4FYKkm0XureyrzjJ0rKTmQjKCfsaYH9oOUINGZqqH1rJKTvzlTvABkNzGG3sEWjnMHbvDtfjATpZna4APIHA==",
   "success": true,
-  "projectFilePath": "C:\\new vs code\\UserApi\\UserApi.csproj",
+  "projectFilePath": "E:\\new vs code\\UserApi\\UserApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lirui\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\lirui\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.0\\microsoft.aspnetcore.authentication.jwtbearer.5.0.0.nupkg.sha512",

@@ -25,10 +25,10 @@ namespace UserApi.Models
         public int Age { get; set; }
         // [Display(Name = "省份")]
         // [Required(ErrorMessage = "请输入{0}")]
-        public string Provinces { get; set; }
+        public int Provinces { get; set; }
         // [Display(Name = "城市")]
         // [Required(ErrorMessage = "请输入{0}")]
-        public string City { get; set; }
+        public int City { get; set; }
         // [Display(Name = "图片")]
         public string Image { get; set; }
         // [Display(Name = "个人网址")]
