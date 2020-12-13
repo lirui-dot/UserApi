@@ -38,7 +38,7 @@ namespace UserApi.Controllers
 
                 if (dbuser != null)
                 {
-                    return RedirectToAction("Edit", "Personal", new { id = dbuser.Id });
+                    return Json(dbuser);
                 }
 
 
