@@ -1,11 +1,13 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.AspNetCore.Mvc;
 
 namespace UserApi.Models
 {
     public class User
     {
         public int Id { get; set; }
+        
         [Display(Name = "用户名")]
         [Required(ErrorMessage = "请输入{0}")]
         public string UserName { get; set; }

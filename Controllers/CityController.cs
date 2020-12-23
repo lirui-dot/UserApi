@@ -22,7 +22,6 @@ namespace UserApi.Controllers
         
         public async Task<ActionResult> PostProvince(int? parentid)
         {
-                
                 var dbProvince=await _context.Provinces.Where(b=>b.parentid==parentid).ToListAsync();
 
                 if (dbProvince != null)

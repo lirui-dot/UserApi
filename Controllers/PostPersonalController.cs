@@ -21,6 +21,7 @@ namespace UserApi.Controllers
             _context = context;
         }
         [HttpPost]
+        
         public async Task<ActionResult> Edit(User user, int id)
         {
             
