@@ -10,8 +10,7 @@ namespace UserApi.Migrations
                 name: "Provinces",
                 columns: table => new
                 {
-                    id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    id = table.Column<int>(type: "int", nullable: false),
                     name = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     parentid = table.Column<int>(type: "int", nullable: false),
                     parentname = table.Column<string>(type: "nvarchar(max)", nullable: true),

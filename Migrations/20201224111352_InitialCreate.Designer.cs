@@ -9,7 +9,7 @@ using UserApi.Models;
 namespace UserApi.Migrations
 {
     [DbContext(typeof(UserContext))]
-    [Migration("20201223153042_InitialCreate")]
+    [Migration("20201224111352_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,9 +23,7 @@ namespace UserApi.Migrations
             modelBuilder.Entity("UserApi.Models.Province", b =>
                 {
                     b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<string>("areacode")
                         .HasColumnType("nvarchar(max)");

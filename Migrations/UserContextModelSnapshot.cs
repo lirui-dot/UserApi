@@ -21,9 +21,7 @@ namespace UserApi.Migrations
             modelBuilder.Entity("UserApi.Models.Province", b =>
                 {
                     b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("int");
 
                     b.Property<string>("areacode")
                         .HasColumnType("nvarchar(max)");
