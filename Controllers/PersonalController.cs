@@ -43,7 +43,7 @@ namespace UserApi.Controllers
             usermodel.PassWord = user.PassWord;
             usermodel.Gender = user.Gender;
             usermodel.Age = user.Age;
-            usermodel.Provinces = user.Provinces;
+            usermodel.Provinces = user.Province;
             usermodel.City = user.City;
             string fileUrl = Path.GetFileName(user.Image);
             var path = Directory.GetCurrentDirectory();

@@ -27,7 +27,7 @@ namespace UserApi.Models
         public int Age { get; set; }
         // [Display(Name = "省份")]
         // [Required(ErrorMessage = "请输入{0}")]
-        public int Provinces { get; set; }
+        public int Province { get; set; }
         // [Display(Name = "城市")]
         // [Required(ErrorMessage = "请输入{0}")]
         public int City { get; set; }

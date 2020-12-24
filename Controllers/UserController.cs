@@ -26,10 +26,11 @@ namespace UserApi.Controllers
             _context = context;
         }
         [HttpPost]
-        public async Task<ActionResult<User>> PostUser(User user)
+        
+        public async Task<IActionResult> PostUser(User user)
         {
             var p = await _context.Provinces.FindAsync(1);
-            if (p.id.ToString() == null)
+            if (p == null)
             {
                 string url = "https://api.jisuapi.com/area/province?appkey=1b5f267715e671b2";
                 var handler = new HttpClientHandler()
@@ -71,12 +72,12 @@ namespace UserApi.Controllers
                             await _context.SaveChangesAsync();
                         }
                     }
-                    return Json(prs);
+                   
                 }
             }
 
             var c = await _context.Provinces.FindAsync(499);
-            if (c.id.ToString() == null)
+            if (c == null)
             {
                 for (int w = 1; w < 10; w++)
                 {
